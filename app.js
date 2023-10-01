@@ -5,8 +5,8 @@ const userRoutes=require("./Router/UserRouter")
 const MessageRoutes=require("./Router/MessageRouter")
 const bodyParser = require('body-parser');
 const app=express()
-app.use(cors({credentials:true,origin:["http://localhost:3000",]}))
-
+app.use(cors({credentials:true,origin:["https://chatapp-5kdq.onrender.com"]}))
+//mongoose verson 6.10.1    https://chatapp-5kdq.onrender.com
 app.use(bodyParser.json());
 app.use(express.json());
 

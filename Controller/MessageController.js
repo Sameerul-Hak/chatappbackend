@@ -21,3 +21,17 @@ exports.postmessage=(req,res)=>{
         })
     })
 }
+exports.deletemessage=(req,res)=>{
+    const {message} =req.body;
+    Message.deleteOne({
+        message
+    }).then(()=>{
+        res.json({
+            message:"sucess"
+        })
+    }).catch((e)=>{
+        res.json({
+            error:e
+        })
+    })
+}

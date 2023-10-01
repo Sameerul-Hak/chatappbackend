@@ -16,6 +16,7 @@ exports.registerUser=(req,res)=>{
 }
 exports.loginUser=(req,res)=>{
     const {phoneNumber,password}=req.body;
+    console.log(phoneNumber,password)
     User.findOne({ phoneNumber })
         .then(user => {
             if (!user) {
